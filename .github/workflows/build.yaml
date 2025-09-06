@@ -14,10 +14,10 @@ jobs:
         run: |
           mkdir build
           cd build
-          ls /Users/runner/.dotnet/sdk/8.0.413
           CC=clang CXX=clang++ cmake .. -DDOTNET_DIR=/Users/runner/.dotnet
           make
+          file bin/netcoredbg
       - uses: actions/upload-artifact@v4
         with:
           name: netcoredbg-arm64
-          path: build
+          path: bin
