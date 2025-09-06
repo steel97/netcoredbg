@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  workflow_call:
+  push:
+
+jobs:
+  apple-darwin-aarch64:
+    name: apple darwin aarch64
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          mkdir build
+          cd build
+          CC=clang CXX=clang++ cmake .. -DDOTNET_DIR=/usr/local/share/dotnet/sdk
+          make
+      - uses: actions/upload-artifact@v4
+        with:
+          name: netcoredbg-arm64
+          path: build
