@@ -16,11 +16,15 @@ jobs:
           cd build
           CC=clang CXX=clang++ cmake .. -DDOTNET_DIR=/Users/runner/.dotnet
           make
-          ls
-          cd ..
-          ls
-          file bin/netcoredbg
+          file src/netcoredbg
       - uses: actions/upload-artifact@v4
         with:
           name: netcoredbg-arm64
-          path: bin
+          path: |
+            src/netcoredbg
+            src/libdbgshim.dylib
+            src/ManagedPart.dll
+            src/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+            src/Microsoft.CodeAnalysis.CSharp.dll
+            src/Microsoft.CodeAnalysis.Scripting.dll
+            src/Microsoft.CodeAnalysis.dll
