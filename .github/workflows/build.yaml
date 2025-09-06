@@ -21,10 +21,10 @@ jobs:
         with:
           name: netcoredbg-arm64
           path: |
-            src/netcoredbg
-            src/libdbgshim.dylib
-            src/ManagedPart.dll
-            src/Microsoft.CodeAnalysis.CSharp.Scripting.dll
-            src/Microsoft.CodeAnalysis.CSharp.dll
-            src/Microsoft.CodeAnalysis.Scripting.dll
-            src/Microsoft.CodeAnalysis.dll
+            build/src/netcoredbg
+            build/src/libdbgshim.dylib
+            build/src/ManagedPart.dll
+            build/src/Microsoft.CodeAnalysis.CSharp.Scripting.dll
+            build/src/Microsoft.CodeAnalysis.CSharp.dll
+            build/src/Microsoft.CodeAnalysis.Scripting.dll
+            build/src/Microsoft.CodeAnalysis.dll
