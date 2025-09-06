@@ -14,7 +14,8 @@ jobs:
         run: |
           mkdir build
           cd build
-          CC=clang CXX=clang++ cmake .. -DDOTNET_DIR=/usr/local/share/dotnet/sdk
+          ls /usr/local/share/dotnet/sdk
+          CC=clang CXX=clang++ cmake .. -DDOTNET_DIR=/usr/local/share/dotnet/sdk/8.0.413
           make
       - uses: actions/upload-artifact@v4
         with:
