@@ -15,6 +15,7 @@ jobs:
           mkdir build
           cd build
           which dotnet
+          dotnet --list-sdks
           ls /usr/local/
           ls /usr/local/dotnet
           CC=clang CXX=clang++ cmake .. -DDOTNET_DIR=/usr/local/share/dotnet/sdk/8.0.413
