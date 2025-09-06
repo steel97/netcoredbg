@@ -18,6 +18,8 @@ jobs:
           make
           make install
           ls
+          cd ..
+          ls
           file bin/netcoredbg
       - uses: actions/upload-artifact@v4
         with:
