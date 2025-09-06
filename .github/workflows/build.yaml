@@ -16,7 +16,6 @@ jobs:
           cd build
           CC=clang CXX=clang++ cmake .. -DDOTNET_DIR=/Users/runner/.dotnet
           make
-          make install
           ls
           cd ..
           ls
